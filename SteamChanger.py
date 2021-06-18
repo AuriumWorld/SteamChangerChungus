@@ -26,9 +26,12 @@ time.sleep(3)
 
 def name_change():
 
+    current_name = random.choice(names)
+
     driver.find_element_by_class_name('DialogTextInputBase').clear()
-    driver.find_element_by_class_name('DialogTextInputBase').send_keys(random.choice(names))
+    driver.find_element_by_class_name('DialogTextInputBase').send_keys(current_name)
     driver.find_element_by_xpath('/html/body/div[1]/div[7]/div[3]/div/div[2]/div/div/div[3]/div[2]/div[2]/form/div[7]/button[1]').click()
+    print("Your name is now", current_name)
 
 while True:
     name_change()
