@@ -22,6 +22,7 @@ driver.find_element_by_class_name('login_btn').click()
 print('30 seconds to enter your steam code!')
 time.sleep(30)
 driver.find_element_by_class_name('btn_medium').click()
+time.sleep(3)
 
 def name_change():
 
